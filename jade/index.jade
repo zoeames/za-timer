@@ -6,13 +6,20 @@ html
     title
     link(href='css/ionic.app.css', rel='stylesheet')
     script(src='lib/ionic/js/ionic.bundle.js')
+    link(href='css/style.css', rel='stylesheet')
     script(src='cordova.js')
     script(src='js/app.js')
-    script(src='js/controllers.js')
-    script(src='js/services.js')
-  body(ng-app='za-calculator', ng-controller='MainCtrl')
+    script(src='js/main_controller.js')
+  body(ng-app='za-timer')
     .bar.bar-header.bar-positive
       h1.title ZTimer
+    ion-content.has-header(ng-controller='MainCtrl')
+      .range.range-balanced
+        i.icon.ion-ios7-stopwatch-outline
+        input(type='range', ng-model='clock', min='0', max='500')
+        i.icon.ion-ios7-stopwatch
+      button.button.button-full.button-royal(ng-click='start()') START
+      .clock {{clock}} s
     .bar.bar-footer.bar-positive
       .center
         small &copy; 2014, Z. Ames

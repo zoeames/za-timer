@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+    <link href="css/ionic.app.css" rel="stylesheet">
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="cordova.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/main_controller.js"></script>
+  </head>
+  <body ng-app="za-timer">
+    <div class="bar bar-header bar-positive">
+      <h1 class="title">ZTimer</h1>
+    </div>
+    <ion-content ng-controller="MainCtrl" class="has-header">
+      <div class="range range-balanced"><i class="icon ion-ios7-stopwatch-outline"></i>
+        <input type="range" ng-model="clock" min="0" max="500"><i class="icon ion-ios7-stopwatch"></i>
+      </div>
+      <button ng-click="start()" class="button button-full button-royal">START</button>
+      <div class="clock">{{clock}} s</div>
+    </ion-content>
+    <div class="bar bar-footer bar-positive">
+      <div class="center"><small>&copy; 2014, Z. Ames</small></div>
+    </div>
+  </body>
+</html>
