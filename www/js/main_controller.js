@@ -10,6 +10,7 @@
       $scope.clock -= 1;
 
       if($scope.clock <= 0){
+        navigator.vibrate(3000);
         $interval.cancel(timer);
       }
     }

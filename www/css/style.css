@@ -17,4 +17,5 @@ body{
   border-radius: 20px;
   height: 100px;
   width: 200px;
+  vertical-align: middle;
 }
